@@ -1,18 +1,19 @@
- (Run commands from \var\www\html)
+This project contains code that implements a function (and UI) to compare three numbers, returning true or false (depending on whether the first two numbers add up to the third).
+
+# Installation
+
++ Ensure you have docker installed locally
++ Clone repository (https://github.com/segunb/numberComparator)
++ Start the Docker container defined `docker-compose up -d --build`
+(you may have to change volume mappings in docker-compose definition yml file)
++ Access the running Docker container's command line `docker exec -it <container> bash`
++ Install the following by running the commands below (from \var\www\html in container):
  
- Install PHPUnit using:
-	php composer.phar require --dev phpunit/phpunit
- 	php composer.phar dump-autoload
+ 1) Install PHPUnit using:<br>
+    `php composer.phar require --dev phpunit/phpunit`<br>
+ 	`php composer.phar dump-autoload`
 
- Check version:
-	./vendor/bin/phpunit --version
+ 2) Check version:
+	`./vendor/bin/phpunit --version`
 
- Run tests:
-	./vendor/bin/phpunit tests 
-
-
-## Composer Installation
-
-```bash
-composer require 0.0.0/composer-include-files
-```
+ 3) To run PHP unit tests: `./vendor/bin/phpunit tests`

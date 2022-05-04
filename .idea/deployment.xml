@@ -2,77 +2,63 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="CakePHP">
+      <paths name="DiversityWeAre">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Famis">
+      <paths name="Elizade OAF">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="MIM">
+      <paths name="Elizade-website">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="MIM-Moodle-server">
+      <paths name="FEB Sprint">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Moodle-IMS-unenrol">
+      <paths name="FEB-CSP">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Moodle-LNA-618-docker">
+      <paths name="STF-Server">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Moodle-QM-course-rollover-CTP-219">
+      <paths name="SignTech-Server">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="TT-PHP-support-app">
+      <paths name="Yum2Yum">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="TT-admin">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="payonline">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="tt-suport-app">
+      <paths name="blackhouse">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

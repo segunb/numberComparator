@@ -15,7 +15,8 @@ use ComposerIncludeFiles\NumberFactory;
             // Read input (capturing each number separately so is may be echoed in UI)
             [$numberOneInput, $numberTwoInput, $numberThreeInput] = $numbers = readNumbersEntered();
 
-            if ($_GET['debug'] == 'Y') echo var_export($numbers, true) . "<br><br>";
+            if ($_GET['debug'] == 'Y')
+                echo var_export($numbers, true) . "<br><br>";
 
             // Validate input. Throw errors if something i wrong
             validateNumberEntered($numbers);
@@ -45,14 +46,17 @@ use ComposerIncludeFiles\NumberFactory;
 
     <title>Number Checker</title>
 </head>
-<body class="text-center">
+<body class="">
     <div class="container">
-        <div class="my-4"><h1>Number triples checker</h1></div>
+        <div class="my-4 text-secondary fs-1 text-center">Number Checker</div>
+        <hr>
         <form method="post">
             <div class="row">
-                <div class="alert alert-primary" role="alert">
+                <div class="alert alert-primary fs-6" role="alert">
                     <p>
+                        <strong>
                         Write a method which when given 3 numbers returns whether the first 2 numbers add up to the 3rd.
+                        </strong>
                     </p>
                     <p>Here is a set of test values to confirm your method;</p>
                     <p>Example 1 – Input = (1, 2, 10) Output = False<br>Example 2 – Input = (2, 5, 7) Output = True</p>

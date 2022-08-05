@@ -9,6 +9,7 @@ use ComposerIncludeFiles\NumberFactory;
 
     $errorMessage = "";
 
+    // Added commit to trigger GH actions
     // If the form was submitted, try to process it
     if (formWasSubmitted()) {
         try {
@@ -33,6 +34,9 @@ use ComposerIncludeFiles\NumberFactory;
             $errorMessage = $e->getMessage();
         }
     }
+
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -118,6 +122,27 @@ use ComposerIncludeFiles\NumberFactory;
 </body>
 </html>
 <?php
+
+
+// $collectionOfnumbers = [1, 2, 3, 9];
+$collectionOfnumbers = [1,2,4,4];
+$sum = 8;
+
+echo
+    "Input numbers: " . var_export($collectionOfnumbers, true)
+    . ". Result: " . (compareSetOfNumbers($collectionOfnumbers, 8) ? 'True' : 'False');
+
+function compareSetOfNumbers($numbers, $sum) {
+
+    foreach ($numbers as $firstNumber) {
+        foreach ($numbers as $secondNumber) {
+            if ($result = numbersMatch($firstNumber, $secondNumber, $sum))
+                return $result;
+        }
+    }
+
+    return false;
+}
 
 function numbersMatch($numberOne, $numberTwo, $numberThree) {
     [$numberOne, $numberTwo, $numberThree] = convertInputToObjects($numberOne, $numberTwo, $numberThree);

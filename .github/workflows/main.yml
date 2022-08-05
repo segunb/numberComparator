@@ -32,7 +32,7 @@ jobs:
       # Create new S3 bucket
       - name: Create S3 bucket
         run: |
-          aws s3 mb s3://SegunBabalola-tech-huddle-2022-08-05
+          aws s3 mb s3://segun-babalola-tech-huddle-2022-08-05
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

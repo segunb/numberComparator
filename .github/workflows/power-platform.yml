@@ -34,8 +34,7 @@ jobs:
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0.8.1
       with:
-        authenticationType: PowerPlatformSPN
-        # PowerPlatformSPN: 'My service connection'
+        environment-url: 'https://org890e1e60.crm11.dynamics.com'
         app-id: $WF_APPLICATION_ID
         client-secret: ${{ secrets.POWER_PLATFORM_SECRET_VALUE }}
         tenant-id: $WF_TENANT_ID

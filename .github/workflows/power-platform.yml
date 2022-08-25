@@ -40,6 +40,6 @@ jobs:
         environment-url: 'https://org890e1e60.crm11.dynamics.com/'
         app-id: $WF_APPLICATION_ID
         tenant-id: $WF_TENANT_ID
-        # client-secret: ${{secrets.POWER_PLATFORM_SECRET_VALUE}}
-        user-name: 'SegunBabalola@UCL221.onmicrosoft.com'
-        password-secret: ${{ secrets.POWER_PLATFORM_USER_PASSWORD }}
+        client-secret: ${{secrets.POWER_PLATFORM_SECRET_VALUE}}
+        # user-name: 'SegunBabalola@UCL221.onmicrosoft.com'
+        # password-secret: ${{ secrets.POWER_PLATFORM_USER_PASSWORD }}

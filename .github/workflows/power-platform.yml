@@ -12,20 +12,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  export-from-dev:
+  build:
     runs-on: windows-latest
 
     env:
       RUNNER_DEBUG: 1
       ENVIRONMENT_URL: 'https://orgd1b10ac2.crm11.dynamics.com/'
-      CLIENT_ID: '0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0'
-      TENANT_ID: '52546350-b6d6-4457-9594-c98e0d08fd76'
+      WF_APPLICATION_ID: '0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0'
+      WF_TENANT_ID: '52546350-b6d6-4457-9594-c98e0d08fd76'
 
     steps:
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@0.4.0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
-        app-id: ${{env.CLIENT_ID}}
-        client-secret: ${{ secrets.POWER_PLATFORM_SECRET_VALUE }}
+        app-id: ${{env.WF_APPLICATION_ID}}
         tenant-id: ${{env.TENANT_ID}}
+        client-secret: ${{secrets.POWER_PLATFORM_SECRET_VALUE}}
+        

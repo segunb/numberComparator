@@ -17,6 +17,9 @@ jobs:
 
     env:
       RUNNER_DEBUG: 1
+      ENVIRONMENT_URL: 'https://orgd1b10ac2.crm11.dynamics.com/'
+      CLIENT_ID: '0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0'
+      TENANT_ID: '52546350-b6d6-4457-9594-c98e0d08fd76'
 
     steps:
     - uses: actions/checkout@v2

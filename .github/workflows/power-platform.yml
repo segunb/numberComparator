@@ -7,27 +7,17 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
-  # This workflow contains a single job called "build"
-  build:
-
-    # The type of runner that the job will run on
+  export-from-dev:
     runs-on: windows-latest
 
     env:
       RUNNER_DEBUG: 1
-      WF_APPLICATION_ID: '0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0'
-      WF_TENANT_ID: '52546350-b6d6-4457-9594-c98e0d08fd76'
-  
-    # Steps represent a sequence of tasks that will be executed as part of the job
+
     steps:
     - uses: actions/checkout@v2
       with:
@@ -36,7 +26,7 @@ jobs:
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@0.4.0
       with:
-        environment-url: 'https://orgd1b10ac2.crm11.dynamics.com/'
-        app-id: $WF_APPLICATION_ID
-        tenant-id: $WF_TENANT_ID
-        client-secret: ${{secrets.POWER_PLATFORM_SECRET_VALUE}}
+        environment-url: ${{env.ENVIRONMENT_URL}}
+        app-id: ${{env.CLIENT_ID}}
+        client-secret: ${{ secrets.POWER_PLATFORM_SECRET_VALUE }}
+        tenant-id: ${{env.TENANT_ID}}

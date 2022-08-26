@@ -15,7 +15,7 @@ on:
 
 # Add environment variables to represent test Power Platform tenancy I provisioned
 env:
-  WF_APPLICATION_ID: 50a16f29-0343-4a7f-9531-a2477b18d66c
+  WF_APPLICATION_ID: 0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0
   WF_TENANT_ID: 52546350-b6d6-4457-9594-c98e0d08fd76
   RUNNER_DEBUG: 1
 
@@ -38,8 +38,7 @@ jobs:
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
         environment-url: 'https://org890e1e60.crm11.dynamics.com/'
+        cloud: Public
         app-id: $WF_APPLICATION_ID
         tenant-id: $WF_TENANT_ID
         client-secret: ${{secrets.POWER_PLATFORM_SECRET_VALUE}}
-        # user-name: 'SegunBabalola@UCL221.onmicrosoft.com'
-        # password-secret: ${{ secrets.POWER_PLATFORM_USER_PASSWORD }}

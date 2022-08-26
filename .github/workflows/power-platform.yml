@@ -15,8 +15,8 @@ on:
 
 # Add environment variables to represent test Power Platform tenancy I provisioned
 env:
-  WF_APPLICATION_ID: 0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0
-  WF_TENANT_ID: 52546350-b6d6-4457-9594-c98e0d08fd76
+  WF_APPLICATION_ID: '0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0'
+  WF_TENANT_ID: '52546350-b6d6-4457-9594-c98e0d08fd76'
   RUNNER_DEBUG: 1
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -35,9 +35,9 @@ jobs:
     steps:
     
     - name: who-am-i action
-      uses: microsoft/powerplatform-actions/who-am-i@v0
+      uses: microsoft/powerplatform-actions/who-am-i@0.4.0
       with:
-        environment-url: 'https://org890e1e60.crm11.dynamics.com/'
+        environment-url: 'https://orgd1b10ac2.crm11.dynamics.com/'
         cloud: Public
         app-id: $WF_APPLICATION_ID
         tenant-id: $WF_TENANT_ID

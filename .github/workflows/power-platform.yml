@@ -13,12 +13,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Add environment variables to represent test Power Platform tenancy I provisioned
-env:
-  WF_APPLICATION_ID: '0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0'
-  WF_TENANT_ID: '52546350-b6d6-4457-9594-c98e0d08fd76'
-  RUNNER_DEBUG: 1
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
@@ -30,7 +24,9 @@ jobs:
 
     env:
       RUNNER_DEBUG: 1
-      
+      WF_APPLICATION_ID: '0c3b75c5-615b-46ef-bdf0-b1cb8678f3d0'
+      WF_TENANT_ID: '52546350-b6d6-4457-9594-c98e0d08fd76'
+  
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2

@@ -28,6 +28,6 @@ jobs:
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         app-id: ${{env.WF_APPLICATION_ID}}
-        tenant-id: ${{env.TENANT_ID}}
+        tenant-id: ${{env.WF_TENANT_ID}}
         client-secret: ${{secrets.POWER_PLATFORM_SECRET_VALUE}}
         
